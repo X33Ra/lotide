@@ -6,7 +6,7 @@ const assertEqual = function(actual, expected) {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
   }
 };
-// this part poofs the array into two and then make a new array to return back to the assert equal 
+// this part poofs the array into two and then make a new array to return back to the assert equal
 const tail = function(array) {
   if (array.length <= 1) {
     return [];
@@ -15,8 +15,8 @@ const tail = function(array) {
 };
 
 // TEST CODE
-assertEqual(tail([1, 2, 3]).toString(), [2, 3].toString()); // this checks if it's same 
-assertEqual(tail(["Yo Yo", "Lighthouse", "Labs"]).toString(), ["Lighthouse", "Labs"].toString()); // this just doesnt include the head part 
+assertEqual(tail([1, 2, 3]).toString(), [2, 3].toString()); // this checks if it's same
+assertEqual(tail(["Yo Yo", "Lighthouse", "Labs"]).toString(), ["Lighthouse", "Labs"].toString()); // this just doesnt include the head part
 
 // the test codes below is for fancy double checks
 assertEqual(tail([5]).toString(), [].toString()); // this is to return an empty array when there is only one input in the array

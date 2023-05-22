@@ -23,3 +23,4 @@ assertEqual(tail([5]).toString(), [].toString()); // this is to return an empty 
 assertEqual(tail([]).toString(), [].toString()); // but my guy here returns nothing when you give the code nothing to work with
 
 
+                                                                            

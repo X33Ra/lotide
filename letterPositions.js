@@ -40,4 +40,15 @@ const eqArrays = function(actual, expected) {
 
 eqArrays([1, 2, 3], [1, 2, 3]); // => true
 
+// Copy assertArrayEqual function below
 
+const assertArraysEqual = function(actual, expected) {
+  if (eqArrays(actual, expected)) {
+    console.log(`✅✅✅ Assertion Passed: [${actual}] === [${expected}]`);
+  } else {
+    console.log(`🛑🛑🛑 Assertion Failed: [${actual}] !== [${expected}]`);
+  }
+};
+
+// Added a test case to define assetArrayEqual function
+assertArraysEqual([1, 2, 3], [1, 2, 3]); // Pass

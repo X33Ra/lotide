@@ -1,50 +1,44 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
-const countOnly = function(allItems, itemsToCount) {
-  // allItems: an array of strings that we need to look through
-
-  
-  // itemsToCount: an object specifying what to count
+const letterPositions = function(sentence) {
   const results = {};
-  for (const item of allItems) {
-    if (itemsToCount[item]) {
-      if (results[item]) {
-        results[item] += 1;
+
+  for (let i = 0; i < sentence.length; i++) {
+    const char = sentence[i];
+    if (char !== ' ') {
+      if (!results[char]) {
+        results[char] = [i];
       } else {
-        results[item] = 1;
+        results[char].push(i);
       }
     }
-    console.log(item);
   }
-  // ... perform the necessary computations to populate the results object
-  
+
   return results;
-
-
 };
 
+const banana = letterPositions('hello');
+console.log(banana);
 
-const firstNames = [
-  "Karl",
-  "Salima",
-  "Agouhanna",
-  "Fang",
-  "Kavith",
-  "Jason",
-  "Salima",
-  "Fang ",
-  "Joe"
-];
 
-const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
+const eqArrays = function(actual, expected) {
+  if (actual.length !== expected.length) {
+    return false;
+  }
 
-assertEqual(result1["Jason"], 1);
-assertEqual(result1["Karima"], undefined);
-assertEqual(result1["Fang"], 2);
-assertEqual(result1["Agouhanna"], undefined);
+  for (let i = 0; i < actual.length; i++) {
+    if (actual[i] !== expected[i]) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+const assertArraysEqual = function(actual, expected) {
+  if (eqArrays(actual, expected)) {
+    console.log(`✅✅✅ Assertion Passed: [${actual}] === [${expected}]`);
+  } else {
+    console.log(`🛑🛑🛑 Assertion Failed: [${actual}] !== [${expected}]`);
+  }
+};
+
+assertArraysEqual([1, 2, 3], [1, 2, 3]);

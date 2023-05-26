@@ -36,7 +36,7 @@ const firstNames = [
   "Kavith",
   "Jason",
   "Salima",
-  "Fang",
+  "Fang ",
   "Joe"
 ];
 

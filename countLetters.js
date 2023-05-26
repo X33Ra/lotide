@@ -11,7 +11,13 @@ const assertEqual = function(actual, expected) {
 // and then return a count of each of the letters in that sentence
 
 const countLetters = function(sentence) {
+
   const letterCount = {};
+
+  // this for loop reads the string result at line 29
+  // then it counts reads the letter and count them
+  // it returns the number of said letter back to an array then
+  // reports it back to you
 
   for (const char of sentence) {
     if (char !== ' ') {

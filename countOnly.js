@@ -18,6 +18,12 @@ const countOnly = function(allItems, itemsToCount) {
   // itemsToCount: an object specifying what to count
   const results = {};
   for (const item of allItems) {
+    if (results[item]) {
+      results[item] += 1;
+    } else {
+      results[item] = 1;
+    }
+
     console.log(item);
   }
   // ... perform the necessary computations to populate the results object

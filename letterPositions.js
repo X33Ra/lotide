@@ -20,3 +20,24 @@ const letterPositions = function(sentence) {
 };
 const banana = letterPositions('lighthouse in the house');
 console.log(banana);
+
+
+//copy eqArrays function below
+const eqArrays = function(actual, expected) {
+  if (actual.length !== expected.length) {
+    return false;
+  }
+
+  for (let i = 0; i < actual.length; i++) {
+    if (actual[i] !== expected[i]) {
+      return false;
+    }
+  }
+
+  return true;
+};
+// I added some test codes just to define eqArray's function
+
+eqArrays([1, 2, 3], [1, 2, 3]); // => true
+
+

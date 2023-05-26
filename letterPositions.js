@@ -18,4 +18,5 @@ const letterPositions = function(sentence) {
 
   return results;
 };
-console.log(letterPositions);
+const banana = letterPositions('lighthouse in the house');
+console.log(banana);

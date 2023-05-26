@@ -45,6 +45,7 @@ const letterPositions = function(sentence) {
 const banana = letterPositions('hello');
 console.log(banana);
 
+// i created 49 - 54 cause i dont want to make my code longer
 const testPositions = {
   'h': [0],
   'e': [1],

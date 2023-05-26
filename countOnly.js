@@ -5,3 +5,15 @@ const assertEqual = function(actual, expected) {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
   }
 };
+
+
+
+
+const countOnly = function(allItems, itemsToCount) {
+// allItems: an array of strings that we need to look through
+
+
+
+// itemsToCount: an object specifying what to count
+
+}

@@ -36,9 +36,6 @@ const eqArrays = function(actual, expected) {
 
   return true;
 };
-// I added some test codes just to define eqArray's function
-
-console.log(eqArrays([1, 2, 3], [1, 2, 3])); // => true
 
 // Copy assertArrayEqual function below
 

@@ -7,3 +7,6 @@ const assertEqual = function(actual, expected) {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
   }
 };
+
+// Conditions:
+// Implement the definition for function eqObjects which will take in two objects and returns true or false, based on a perfect match.

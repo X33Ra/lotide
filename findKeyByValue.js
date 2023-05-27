@@ -23,13 +23,13 @@ const findKeyByValue = function(object, value) {
     }
   }
   return undefined;
-}
+};
 
 
 // Here are some test assertions for you to implmement and make pass
 
 const bestTVShowsByGenre = {
-  sci_fi: "The Expanse",
+  sciFi: "The Expanse",
   comedy: "Brooklyn Nine-Nine",
   drama:  "The Wire"
 };

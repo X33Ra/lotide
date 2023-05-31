@@ -1,5 +1,3 @@
-// copy eqObjects into this file
-
 const eqArrays = function(actual, expected) {
   if (actual.length !== expected.length) {
     return false;
@@ -13,15 +11,6 @@ const eqArrays = function(actual, expected) {
 
   return true;
 };
-
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
 
 const eqObjects = function(object1, object2) {
   const keys1 = Object.keys(object1);
@@ -51,9 +40,20 @@ const eqObjects = function(object1, object2) {
   return true;
 };
 
-// Implement assertObjectsEqual which will take in two objects and console.log an appropriate message to the console.
-
-// FUNCTION IMPLEMENTATION
 const assertObjectsEqual = function(actual, expected) {
-  // Implement me!
+  const inspect = require('util').inspect;
+
+  if (eqObjects(actual, expected)) {
+    console.log(`✅✅✅ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
+  } else {
+    console.log(`🛑🛑🛑 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);
+  }
 };
+
+// Test cases
+const obj1 = { a: 1, b: 2 };
+const obj2 = { b: 2, a: 1 };
+const obj3 = { a: 1, b: 2, c: 3 };
+
+assertObjectsEqual(obj1, obj2); // Objects should be equal
+assertObjectsEqual(obj1, obj3); // Objects have different lengths

@@ -1,3 +1,20 @@
+// copy eqArray's function into into this file
+// If the key value is an array, ensure that eqArrays can be called to compare the array key values for both objects.
+const eqArrays = function(actual, expected) {
+  if (actual.length !== expected.length) {
+    return false;
+  }
+
+  for (let i = 0; i < actual.length; i++) {
+    if (actual[i] !== expected[i]) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+
 // Copy our assertEqual function into this new file.
 
 const assertEqual = function(actual, expected) {

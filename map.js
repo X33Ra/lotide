@@ -5,3 +5,7 @@
 // The map function will return a new array based on the results of the callback function.
 
 const words = ["ground", "control", "to", "major", "tom"];
+
+// Instruction:
+// Call map and pass in our words and a simple arrow function.
+

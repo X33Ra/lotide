@@ -14,6 +14,29 @@ const map = function(array, callback) {
   return results;
 };
 
+const assertEqual = function(actual, expected)  {
+  if (actual === expected) {
+    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+  } else {
+    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
+  }
+};
+// for this part i wanted to make it so that the assert equal assert checks the values
+// and so I added eq arrays to have it do the work then pass it back to eq array
+// to print out the report
+
+const eqArrays = function(actual, expected) {
+  if (actual.length !== expected.length) {
+    return false;
+  }
+
+  for (let i = 0; i < actual.length; i++) {
+    if (actual[i] !== expected[i]) {
+      return false;
+    }
+  }
+};
+
 const words = ["ground", "control", "to", "major", "tom"];
 
 // Instruction:

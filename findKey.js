@@ -28,6 +28,10 @@ const findKey = function(object, callback) {
   return undefined;
 };
 
+//Test cases
+// these things go to find key
+// then find key process them and return them back here
+// then they go to assert equal for report
 const obj1 = {
   "blue": { stars: 2 },
   "green": { stars: 1 },

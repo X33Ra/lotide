@@ -15,7 +15,7 @@ const map = function(array, callback) {
 };
 
 const assertEqual = function(actual, expected)  {
-  if (actual === expected) {
+  if (eqArrays(actual, expected)) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
   } else {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
@@ -35,12 +35,18 @@ const eqArrays = function(actual, expected) {
       return false;
     }
   }
-};
 
-const words = ["ground", "control", "to", "major", "tom"];
+  return true;
+};
 
 // Instruction:
 // Call map and pass in our words and a simple arrow function.
+// I also have to add 2 more function to hold the array that will be used to assert
+
+const words = ['ground', 'control', 'to', 'major', 'tom'];
+const expectedOutput = ['g','c','t','m','t'];
 
 const results1 = map(words, word => word[0]);
 console.log(results1);
+// this is for the assert equal's function
+assertEqual(results1, expectedOutput);

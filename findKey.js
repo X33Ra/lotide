@@ -13,3 +13,17 @@ const assertEqual = function(actual, expected) {
 // If no key is found, then it should return undefined.
 // Use assertEqual to write test cases for various scenarios.
 // The tests should be written below the definition of your function.
+
+
+// implement find key function that take object and a cb [check]
+const findKey = function(object, callback) {
+  // scan the object and return first key
+  for (let key in object) {
+    if (callback(object[key])) {
+      //return key if work [check]
+      return key;
+    }
+  }
+  // if no key found return undefined [check]
+  return undefined;
+};

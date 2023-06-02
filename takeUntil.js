@@ -5,3 +5,15 @@
 
 // The array to work with
 // The callback (which Lodash calls "predicate")
+
+
+const takeUntil = function(array, callback) {
+  const results = [];
+  for (const item of array) {
+    if (callback(item)) {
+      return results;
+    }
+    results.push(item);
+  }
+  return results;
+};

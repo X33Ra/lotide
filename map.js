@@ -15,6 +15,8 @@ const map = function(array, callback) {
 };
 
 const assertEqual = function(actual, expected)  {
+  // instead of if(eqArrays(actual === expected)) i did (eqArrays(actual, Expected))
+  // cause it will not work cause the actual and expected are parametres
   if (eqArrays(actual, expected)) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
   } else {

@@ -26,3 +26,25 @@ const takeUntil = function(array, callback) {
 
 
 // Bring in our assertArraysEqual function (and associated eqArrays function) in order write some easy-to-read test cases.
+
+const eqArrays = function(actual, expected) {
+  if (actual.length !== expected.length) {
+    return false;
+  }
+
+  for (let i = 0; i < actual.length; i++) {
+    if (actual[i] !== expected[i]) {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+const assertArraysEqual = function(actual, expected) {
+  if (eqArrays(actual, expected)) {
+    console.log(`✅✅✅ Assertion Passed: [${actual}] === [${expected}]`);
+  } else {
+    console.log(`🛑🛑🛑 Assertion Failed: [${actual}] !== [${expected}]`);
+  }
+};

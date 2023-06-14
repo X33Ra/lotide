@@ -27,7 +27,7 @@ const findKey = function(object, callback) {
   // if no key found return undefined [check]
   return undefined;
 };
-
+module.exports = findKey;
 //Test cases
 // these things go to find key
 // then find key process them and return them back here
